@@ -1,0 +1,35 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+// start root block ========================================
+rootProject.name = "MVVM Playground"
+include ':app'
+// end root block ==========================================
+
+// start feature block =====================================
+include ':feature:news'
+include ':feature:about'
+// end feature block =======================================
+
+// start data block ========================================
+include ':network'
+include ':local'
+// end data block ==========================================
+
+// start shared block ======================================
+include ':core'
+include ':shared-component:progress'
+include ':shared-test'
+// end shared block ========================================
+
